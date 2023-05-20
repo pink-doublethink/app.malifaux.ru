@@ -1,4 +1,4 @@
-import { MenuItem as MenuItemType } from "../../constants/menu-items";
+import { MenuItem as MenuItemType } from "../../data/menu-items";
 import MenuItem from "../MenuItem";
 import { ListContainer } from "./MenuItemsList.styles";
 
