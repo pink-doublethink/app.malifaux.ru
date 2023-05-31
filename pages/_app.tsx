@@ -1,16 +1,36 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import DashboardLayout from "../components/DashboardLayout/DashboardLayout";
-import { ThemeProvider } from "styled-components";
-import { theme } from "../styles/theme";
+import type { AppProps } from 'next/app'
+import { withHydrate } from 'effector-next'
+import { useEffect, useState } from 'react'
+import { ToastContainer } from 'react-toastify'
+import NextNProgress from 'nextjs-progressbar'
+import 'react-toastify/dist/ReactToastify.css'
+import '@/styles/globals.css'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const enhance = withHydrate()
+
+function App({ Component, pageProps }: AppProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
-    <ThemeProvider theme={theme}>
-      <DashboardLayout>
+    mounted && (
+      <>
+        <NextNProgress />
         <Component {...pageProps} />
-      </DashboardLayout>
-    </ThemeProvider>
-  );
+        <ToastContainer
+          position="bottom-right"
+          hideProgressBar={false}
+          closeOnClick
+          rtl={false}
+          limit={1}
+          theme="light"
+        />
+      </>
+    )
+  )
 }
-export default MyApp;
+
+export default enhance(App as React.FC<AppProps>)
