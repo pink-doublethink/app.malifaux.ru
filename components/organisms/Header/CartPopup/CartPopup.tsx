@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { $mode } from '@/context/mode'
 import { IWrappedComponentProps } from '@/types/common'
 import { withClickOutside } from '@/utils/withClickOutside'
-import ShoppingCartSvg from '@/components/elements/ShoppingCartSvg/ShoppingCartSvg'
+import ShoppingCartSvg from '@/components/atoms/ShoppingCartSvg/ShoppingCartSvg'
 import {
   $disableCart,
   $shoppingCart,

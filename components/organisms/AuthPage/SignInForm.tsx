@@ -1,17 +1,17 @@
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import { useStore } from 'effector-react'
-import NameInput from '@/components/elements/AuthPage/NameInput'
+import { useRouter } from 'next/router'
+import NameInput from '@/components/atoms/AuthPage/NameInput'
 import { IInputs } from '@/types/auth'
-import { $mode } from '@/context/mode'
-import EmailInput from '@/components/elements/AuthPage/EmailInput'
-import PasswordInput from '@/components/elements/AuthPage/PasswordInput'
-import { singUpFx } from '@/app/api/auth'
+import PasswordInput from '@/components/atoms/AuthPage/PasswordInput'
+import { singInFx } from '../../../app/api/auth'
 import { showAuthError } from '@/utils/errors'
+import { $mode } from '@/context/mode'
 import styles from '@/styles/auth/index.module.scss'
 import spinnerStyles from '@/styles/spinner/index.module.scss'
 
-const SignUpForm = ({ switchForm }: { switchForm: () => void }) => {
+const SignInForm = () => {
   const [spinner, setSpinner] = useState(false)
   const {
     register,
@@ -21,25 +21,20 @@ const SignUpForm = ({ switchForm }: { switchForm: () => void }) => {
   } = useForm<IInputs>()
   const mode = useStore($mode)
   const darkModeClass = mode === 'dark' ? `${styles.dark_mode}` : ''
+  const route = useRouter()
 
   const onSubmit = async (data: IInputs) => {
     try {
       setSpinner(true)
-      const userData = await singUpFx({
-        url: '/users/signup',
+      await singInFx({
+        url: '/users/login',
         username: data.name,
         password: data.password,
-        email: data.email,
       })
 
-      if (!userData) {
-        return
-      }
-
-      resetField('email')
       resetField('name')
       resetField('password')
-      switchForm()
+      route.push('/dashboard')
     } catch (error) {
       showAuthError(error)
     } finally {
@@ -53,18 +48,17 @@ const SignUpForm = ({ switchForm }: { switchForm: () => void }) => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h2 className={`${styles.form__title} ${styles.title} ${darkModeClass}`}>
-        Создать аккаунт
+        Войти на сайт
       </h2>
       <NameInput register={register} errors={errors} />
-      <EmailInput register={register} errors={errors} />
       <PasswordInput register={register} errors={errors} />
       <button
         className={`${styles.form__button} ${styles.button} ${styles.submit} ${darkModeClass}`}
       >
-        {spinner ? <div className={spinnerStyles.spinner} /> : 'SIGN UP'}
+        {spinner ? <div className={spinnerStyles.spinner} /> : 'SIGN IN'}
       </button>
     </form>
   )
 }
 
-export default SignUpForm
+export default SignInForm
