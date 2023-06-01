@@ -1,5 +1,6 @@
 import { MutableRefObject, useRef } from 'react'
-
+import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { $mode } from '@/context/mode'
 import SignUpForm from '@/components/organisms/AuthPage/SignUpForm'
 import SignInForm from '@/components/organisms/AuthPage/SignInForm'
 import styles from '@/styles/auth/index.module.scss'
