@@ -12,7 +12,7 @@ export interface IOption {
 
 export type SelectOptionType = MultiValue<IOption> | SingleValue<IOption> | null
 
-export interface IAccordion {
+export interface IExpandable {
   children: React.ReactNode
   title: string | false
   titleClass: string
@@ -23,7 +23,7 @@ export interface IAccordion {
   callback?: (arg0: boolean) => void
 }
 
-export interface ILayoutProps {
+export interface IContainer {
   children: React.ReactNode
 }
 

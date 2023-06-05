@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from '@/styles/footer/index.module.scss'
 import FooterLogo from './FooterLogo'
 import OnlineStoreContent from './OnlineStoreContent'

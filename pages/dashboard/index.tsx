@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Layout from '@/components/layout/Layout'
+import Layout from '@/components/molecules/Layout'
 import DashboardPage from '@/components/templates/DashboardPage/DashboardPage'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/organisms/Breadcrumbs/Breadcrumbs'
 
 function Dashboard() {
   const { shouldLoadContent } = useRedirectByUserCheck()

@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Layout from '@/components/layout/Layout'
+import Layout from '@/components/molecules/Layout'
 import ShippingPayment from '@/components/templates/ShippingPayment/ShippingPayment'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/organisms/Breadcrumbs/Breadcrumbs'
 import { useCallback } from 'react'
 
 function ShippingPaymentPage() {

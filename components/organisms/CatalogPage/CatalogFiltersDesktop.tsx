@@ -9,7 +9,7 @@ import {
 } from '@/context/boilerParts'
 import { $mode } from '@/context/mode'
 import FilterManufacturerAccordion from './FilterManufacturerAccordion'
-import Accordion from '@/components/elements/Accordion/Accordion'
+import Expandable from '@/components/atoms/Expandable/Expandable'
 import PriceRange from './PriceRange'
 import { ICatalogFilterDesktopProps } from '@/types/catalog'
 import spinnerStyles from '@/styles/spinner/index.module.scss'
@@ -45,7 +45,7 @@ const CatalogFiltersDesktop = ({
         />
       </div>
       <div className={styles.filters__price}>
-        <Accordion
+        <Expandable
           title="Цена"
           titleClass={`${styles.filters__manufacturer__btn} ${darkModeClass}`}
           arrowOpenClass={styles.open}
@@ -58,7 +58,7 @@ const CatalogFiltersDesktop = ({
             />
             <div style={{ height: 24 }} />
           </div>
-        </Accordion>
+        </Expandable>
       </div>
       <div className={styles.filters__boiler_manufacturers}>
         <FilterManufacturerAccordion

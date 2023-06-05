@@ -5,7 +5,7 @@ import {
   IFilterCheckboxItem,
   IManufacturersBlockItemProps,
 } from '@/types/catalog'
-import DeleteSvg from '@/components/elements/DeleteSvg/DeleteSvg'
+import DeleteSvg from '@/components/atoms/DeleteSvg/DeleteSvg'
 import styles from '@/styles/catalog/index.module.scss'
 
 const ManufacturersBlockItem = ({

@@ -1,10 +1,10 @@
 import { MutableRefObject, useRef } from 'react'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { $mode } from '@/context/mode'
-import SignUpForm from '@/components/organisms/AuthPage/SignUpForm'
-import SignInForm from '@/components/organisms/AuthPage/SignInForm'
+import LoginForm from '@/components/organisms/AuthPage/LoginForm'
+import RegistrationForm from '@/components/organisms/AuthPage/RegistrationForm'
 import styles from '@/styles/auth/index.module.scss'
-import ModeToggler from '@/components/atoms/ModeToggler/ModeToggler'
+import ColorToggler from '@/components/atoms/ColorToggler/ColorToggler'
 import { useStore } from 'effector-react'
 
 const AuthPage = () => {
@@ -38,7 +38,7 @@ const AuthPage = () => {
   return (
     <div className={`${styles.main} ${darkModeClass}`}>
       <div className={styles.mode_toggle}>
-        <ModeToggler />
+        <ColorToggler />
       </div>
       <div
         className={`${styles.container} ${styles.a_container} ${darkModeClass}`}
@@ -46,7 +46,7 @@ const AuthPage = () => {
         ref={aContainer}
       >
         <div className={styles.container__inner}>
-          <SignUpForm switchForm={switchForm} />
+          <LoginForm switchForm={switchForm} />
         </div>
       </div>
       <div
@@ -55,7 +55,7 @@ const AuthPage = () => {
         ref={bContainer}
       >
         <div className={styles.container__inner}>
-          <SignInForm />
+          <RegistrationForm />
         </div>
       </div>
       <div

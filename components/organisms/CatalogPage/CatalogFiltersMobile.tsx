@@ -14,7 +14,7 @@ import {
   updatePartsManufacturer,
 } from '@/context/boilerParts'
 import { useState } from 'react'
-import Accordion from '@/components/elements/Accordion/Accordion'
+import Accordion from '@/components/atoms/Accordion/Accordion'
 import PriceRange from './PriceRange'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 

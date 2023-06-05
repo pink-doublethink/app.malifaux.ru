@@ -6,8 +6,8 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { $mode } from '@/context/mode'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import BrandsSliderNextArrow from '@/components/elements/BrandsSliderNextArrow/BrandsSliderNextArrow'
-import BrandsSliderPrevArrow from '@/components/elements/BrandsSliderPrevArrow/BrandsSliderPrevArrow'
+import BrandsSliderNextArrow from '@/components/atoms/BrandsSliderNextArrow/BrandsSliderNextArrow'
+import BrandsSliderPrevArrow from '@/components/atoms/BrandsSliderPrevArrow/BrandsSliderPrevArrow'
 import styles from '@/styles/dashboard/index.module.scss'
 
 const BrandsSlider = () => {
