@@ -1,4 +1,4 @@
-import AuthPage from '@/components/templates/AuthPage/AuthPage'
+// import AuthPage from '@/components/templates/AuthPage/AuthPage'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
 import Head from 'next/head'
 
@@ -8,7 +8,7 @@ function Auth() {
   return (
     <>
       <Head>
-        <title>Маллифо Коллект| {shouldLoadContent ? 'Авторизация' : ''}</title>
+        <title>Аква Термикс | {shouldLoadContent ? 'Авторизация' : ''}</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,4 +20,3 @@ function Auth() {
 }
 
 export default Auth
-
