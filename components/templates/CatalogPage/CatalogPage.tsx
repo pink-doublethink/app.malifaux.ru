@@ -1,6 +1,6 @@
 import { getBoilerPartsFx } from '@/app/api/boilerParts'
-import FilterSelect from '@/components/organisms/CatalogPage/FilterSelect'
-import ManufacturersBlock from '@/components/organisms/CatalogPage/ManufacturersBlock'
+import FilterSelect from '@/components/modules/CatalogPage/FilterSelect'
+import ManufacturersBlock from '@/components/modules/CatalogPage/ManufacturersBlock'
 import {
   $boilerManufacturers,
   $boilerParts,
@@ -19,15 +19,15 @@ import { AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import skeletonStyles from '@/styles/skeleton/index.module.scss'
-import CatalogItem from '@/components/organisms/CatalogPage/CatalogItem'
+import CatalogItem from '@/components/modules/CatalogPage/CatalogItem'
 import ReactPaginate from 'react-paginate'
 import { IQueryParams } from '@/types/catalog'
 import { useRouter } from 'next/router'
 import { IBoilerParts } from '@/types/boilerparts'
-import CatalogFilters from '@/components/organisms/CatalogPage/CatalogFilters'
+import CatalogFilters from '@/components/modules/CatalogPage/CatalogFilters'
 import { usePopup } from '@/hooks/usePoup'
 import { checkQueryParams } from '@/utils/catalog'
-import FilterSvg from '@/components/atoms/FilterSvg/FilterSvg'
+import FilterSvg from '@/components/elements/FilterSvg/FilterSvg'
 
 const CatalogPage = ({ query }: { query: IQueryParams }) => {
   const mode = useStore($mode)

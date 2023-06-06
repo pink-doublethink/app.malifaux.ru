@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useStore } from 'effector-react'
 import { $mode } from '@/context/mode'
 import styles from '@/styles/about/index.module.scss'

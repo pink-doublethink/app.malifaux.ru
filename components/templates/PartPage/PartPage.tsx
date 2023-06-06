@@ -3,24 +3,24 @@ import { toast } from 'react-toastify'
 import { useEffect } from 'react'
 import { $boilerPart } from '@/context/boilerPart'
 import { $mode } from '@/context/mode'
-import PartImagesList from '@/components/organisms/PartPage/PartImagesList'
+import PartImagesList from '@/components/modules/PartPage/PartImagesList'
 import { formatPrice } from '@/utils/common'
 import { $shoppingCart } from '@/context/shopping-cart'
-import CheckedSvg from '@/components/atoms/CheckedSvg/CheckedSvg'
-import HoverSvg from '@/components/atoms/HoverSvg/HoverSvg'
+import CartHoverCheckedSvg from '@/components/elements/CartHoverCheckedSvg/CartHoverCheckedSvg'
+import CartHoverSvg from '@/components/elements/CartHoverSvg/CartHoverSvg'
 import spinnerStyles from '@/styles/spinner/index.module.scss'
 import { toggleCartItem } from '@/utils/shopping-cart'
 import { $user } from '@/context/user'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
-import PartTabs from '@/components/organisms/PartPage/PartTabs'
-import DashboardSlider from '@/components/organisms/DashboardPage/DashboardSlider'
+import PartTabs from '@/components/modules/PartPage/PartTabs'
+import DashboardSlider from '@/components/modules/DashboardPage/DashboardSlider'
 import { getBoilerPartsFx } from '@/app/api/boilerParts'
 import {
   $boilerParts,
   setBoilerParts,
   setBoilerPartsByPopularity,
 } from '@/context/boilerParts'
-import PartAccordion from '@/components/organisms/PartPage/PartAccordion'
+import PartAccordion from '@/components/modules/PartPage/PartAccordion'
 import { removeFromCartFx } from '@/app/api/shopping-cart'
 import styles from '@/styles/part/index.module.scss'
 
@@ -95,7 +95,7 @@ const PartPage = () => {
                 ) : (
                   <>
                     <span className={styles.part__info__btn__icon}>
-                      {isInCart ? <CheckedSvg /> : <HoverSvg />}
+                      {isInCart ? <CartHoverCheckedSvg /> : <CartHoverSvg />}
                     </span>
                     {isInCart ? (
                       <span>Добавлено в карзину</span>
