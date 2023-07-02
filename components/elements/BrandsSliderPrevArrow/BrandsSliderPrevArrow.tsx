@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { IBrandsSliderArrow } from '@/types/elements'
-import BrandSliderArrowSvg from '../BrandsSliderArrow/BrandsSliderArrow'
+import BrandSliderArrowSvg from '../BrandsSliderArrow/BrandsSliderArro'
 import styles from '@/styles/dashboard/index.module.scss'
 
 const BrandsSliderPrevArrow = (props: IBrandsSliderArrow) => (

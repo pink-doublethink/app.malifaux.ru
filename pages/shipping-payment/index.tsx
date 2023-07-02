@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '@/components/layout/Layout'
+import Сontainer from '@/components/layout/Сontainer'
 import ShippingPayment from '@/components/templates/ShippingPayment/ShippingPayment'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 import { useCallback } from 'react'
@@ -17,7 +17,7 @@ function ShippingPaymentPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg" sizes="32x32" href="/img/logo.svg" />
       </Head>
-      <Layout>
+      <Сontainer>
         <main>
           <Breadcrumbs
             getDefaultTextGenerator={getDefaultTextGenerator}
@@ -26,7 +26,7 @@ function ShippingPaymentPage() {
           <ShippingPayment />
           <div className="overlay" />
         </main>
-      </Layout>
+      </Сontainer>
     </>
   )
 }

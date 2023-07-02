@@ -1,8 +1,8 @@
-import { ILayoutProps } from '@/types/common'
+import { IContainer } from '@/types/common'
 import Header from '../modules/Header/Header'
 import Footer from '../modules/Footer/Footer'
 
-const Layout = ({ children }: ILayoutProps) => (
+const Сontainer = ({ children }: IContainer) => (
   <>
     <Header />
     {children}
@@ -10,4 +10,4 @@ const Layout = ({ children }: ILayoutProps) => (
   </>
 )
 
-export default Layout
+export default Сontainer

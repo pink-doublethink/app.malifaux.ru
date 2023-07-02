@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useCallback } from 'react'
 import ContactsPage from '@/components/templates/ContactsPage/ContactsPage'
-import Layout from '@/components/layout/Layout'
+import Сontainer from '@/components/layout/Сontainer'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
 function WholesaleBuyers() {
@@ -17,7 +17,7 @@ function WholesaleBuyers() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg" sizes="32x32" href="/img/logo.svg" />
       </Head>
-      <Layout>
+      <Сontainer>
         <main>
           <Breadcrumbs
             getDefaultTextGenerator={getDefaultTextGenerator}
@@ -26,7 +26,7 @@ function WholesaleBuyers() {
           <ContactsPage isWholesaleBuyersPage={true} />
         </main>
         <div className="overlay" />
-      </Layout>
+      </Сontainer>
     </>
   )
 }

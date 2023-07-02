@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '@/components/layout/Layout'
+import Сontainer from '@/components/layout/Сontainer'
 import DashboardPage from '@/components/templates/DashboardPage/DashboardPage'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
@@ -19,7 +19,7 @@ function Auth() {
         <link rel="icon" type="image/svg" sizes="32x32" href="/img/logo.svg" />
       </Head>
       {shouldLoadContent && (
-        <Layout>
+        <Сontainer>
           <main>
             <Breadcrumbs
               getDefaultTextGenerator={getDefaultTextGenerator}
@@ -28,7 +28,7 @@ function Auth() {
             <DashboardPage />
             <div className="overlay" />
           </main>
-        </Layout>
+        </Сontainer>
       )}
     </>
   )

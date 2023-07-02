@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 import { useCallback, useEffect, useState } from 'react'
 import { useStore } from 'effector-react'
-import Layout from '@/components/layout/Layout'
+import Сontainer from '@/components/layout/Сontainer'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
 import { IQueryParams } from '@/types/catalog'
 import { $boilerPart, setBoilerPart } from '@/context/boilerPart'
@@ -62,7 +62,7 @@ function CatalogPartPage({ query }: { query: IQueryParams }) {
         <Custom404 />
       ) : (
         shouldLoadContent && (
-          <Layout>
+          <Сontainer>
             <main>
               <Breadcrumbs
                 getDefaultTextGenerator={getDefaultTextGenerator}
@@ -71,7 +71,7 @@ function CatalogPartPage({ query }: { query: IQueryParams }) {
               <PartPage />
               <div className="overlay" />
             </main>
-          </Layout>
+          </Сontainer>
         )
       )}
     </>

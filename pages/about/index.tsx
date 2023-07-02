@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useCallback } from 'react'
-import Layout from '@/components/layout/Layout'
+import Сontainer from '@/components/layout/Сontainer'
 import AboutPage from '@/components/templates/AboutPage/AboutPage'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
@@ -17,7 +17,7 @@ function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg" sizes="32x32" href="/img/logo.svg" />
       </Head>
-      <Layout>
+      <Сontainer>
         <main>
           <Breadcrumbs
             getDefaultTextGenerator={getDefaultTextGenerator}
@@ -26,7 +26,7 @@ function About() {
           <AboutPage />
           <div className="overlay" />
         </main>
-      </Layout>
+      </Сontainer>
     </>
   )
 }

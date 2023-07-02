@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '@/components/layout/Layout'
+import Сontainer from '@/components/layout/Сontainer'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
 import CatalogPage from '@/components/templates/CatalogPage/CatalogPage'
 import { IQueryParams } from '@/types/catalog'
@@ -21,7 +21,7 @@ function Catalog({ query }: { query: IQueryParams }) {
         <link rel="icon" type="image/svg" sizes="32x32" href="/img/logo.svg" />
       </Head>
       {shouldLoadContent && (
-        <Layout>
+        <Сontainer>
           <main>
             <Breadcrumbs
               getDefaultTextGenerator={getDefaultTextGenerator}
@@ -30,7 +30,7 @@ function Catalog({ query }: { query: IQueryParams }) {
             <CatalogPage query={query} />
             <div className="overlay" />
           </main>
-        </Layout>
+        </Сontainer>
       )}
     </>
   )

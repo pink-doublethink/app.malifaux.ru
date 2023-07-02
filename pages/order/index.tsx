@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useCallback } from 'react'
-import Layout from '@/components/layout/Layout'
+import Сontainer from '@/components/layout/Сontainer'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
 import OrderPage from '@/components/templates/OrderPage/OrderPage'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
@@ -22,7 +22,7 @@ function Order() {
         <link rel="icon" type="image/svg" sizes="32x32" href="/img/logo.svg" />
       </Head>
       {shouldLoadContent && (
-        <Layout>
+        <Сontainer>
           <main>
             <Breadcrumbs
               getDefaultTextGenerator={getDefaultTextGenerator}
@@ -31,7 +31,7 @@ function Order() {
             <OrderPage />
             <div className="overlay" />
           </main>
-        </Layout>
+        </Сontainer>
       )}
     </>
   )
