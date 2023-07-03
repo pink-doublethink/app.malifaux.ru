@@ -3,14 +3,14 @@ import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 import { useCallback, useEffect, useState } from 'react'
 import { useStore } from 'effector-react'
-import Сontainer from '@/components/layout/Сontainer'
+import Сontainer from '@/components/molecules/Сontainer'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
 import { IQueryParams } from '@/types/catalog'
 import { $boilerPart, setBoilerPart } from '@/context/boilerPart'
 import { getBoilerPartFx } from '@/app/api/boilerParts'
-import PartPage from '@/components/templates/PartPage/PartPage'
+import PartPage from '@/components/organisms/PartPage/PartPage'
 import Custom404 from '../404'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/molecules/Breadcrumbs/Breadcrumbs'
 
 function CatalogPartPage({ query }: { query: IQueryParams }) {
   const { shouldLoadContent } = useRedirectByUserCheck()

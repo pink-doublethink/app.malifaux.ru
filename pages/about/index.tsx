@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { useCallback } from 'react'
-import Сontainer from '@/components/layout/Сontainer'
-import AboutPage from '@/components/templates/AboutPage/AboutPage'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Сontainer from '@/components/molecules/Сontainer'
+import AboutPage from '@/components/organisms/AboutPage/AboutPage'
+import Breadcrumbs from '@/components/molecules/Breadcrumbs/Breadcrumbs'
 
 function About() {
   const getDefaultTextGenerator = useCallback(() => 'О компании', [])

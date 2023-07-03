@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { useCallback } from 'react'
-import Сontainer from '@/components/layout/Сontainer'
-import ContactsPage from '@/components/templates/ContactsPage/ContactsPage'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Сontainer from '@/components/molecules/Сontainer'
+import ContactsPage from '@/components/organisms/ContactsPage/ContactsPage'
+import Breadcrumbs from '@/components/molecules/Breadcrumbs/Breadcrumbs'
 
 function Contacts() {
   const getDefaultTextGenerator = useCallback(() => 'Контакты', [])

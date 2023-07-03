@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Сontainer from '@/components/layout/Сontainer'
+import Сontainer from '@/components/molecules/Сontainer'
 import useRedirectByUserCheck from '@/hooks/useRedirectByUserCheck'
-import CatalogPage from '@/components/templates/CatalogPage/CatalogPage'
+import CatalogPage from '@/components/organisms/CatalogPage/CatalogPage'
 import { IQueryParams } from '@/types/catalog'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Breadcrumbs from '@/components/molecules/Breadcrumbs/Breadcrumbs'
 import { useCallback } from 'react'
 
 function Catalog({ query }: { query: IQueryParams }) {

@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Сontainer from '@/components/layout/Сontainer'
-import ShippingPayment from '@/components/templates/ShippingPayment/ShippingPayment'
-import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
+import Сontainer from '@/components/molecules/Сontainer'
+import ShippingPayment from '@/components/organisms/ShippingPayment/ShippingPayment'
+import Breadcrumbs from '@/components/molecules/Breadcrumbs/Breadcrumbs'
 import { useCallback } from 'react'
 
 function ShippingPaymentPage() {
