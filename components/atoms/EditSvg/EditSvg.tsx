@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-const EditSvg = () => (
+const EditIcon = () => (
   <svg
     width="20"
     height="20"
@@ -29,4 +29,4 @@ const EditSvg = () => (
   </svg>
 )
 
-export default EditSvg
+export default EditIcon

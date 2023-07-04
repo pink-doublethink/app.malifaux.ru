@@ -3,7 +3,7 @@ import { $mode } from '@/context/mode'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import styles from '@/styles/contacts/index.module.scss'
 import MailSvg from '@/components/atoms/MailSvg/MailSvg'
-import FeedbackForm from '@/components/modules/FeedbackForm/FeedbackForm'
+import FeedbackForm from '@/components/molecules/FeedbackForm/FeedbackForm'
 
 const ContactsPage = ({ isWholesaleBuyersPage = false }) => {
   const mode = useStore($mode)

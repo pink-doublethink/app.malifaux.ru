@@ -1,4 +1,4 @@
-const FilterSvg = () => (
+const FilterIcon = () => (
   <svg
     width="20"
     height="17"
@@ -16,4 +16,4 @@ const FilterSvg = () => (
   </svg>
 )
 
-export default FilterSvg
+export default FilterIcon

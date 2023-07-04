@@ -1,4 +1,4 @@
-const DeleteSvg = () => (
+const DeleteIcon = () => (
   <svg
     width="11"
     height="11"
@@ -13,4 +13,4 @@ const DeleteSvg = () => (
   </svg>
 )
 
-export default DeleteSvg
+export default DeleteIcon

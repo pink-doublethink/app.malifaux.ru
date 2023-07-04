@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const MailSvg = () => (
+const MailIcon = () => (
   <svg
     width="16"
     height="16"
@@ -23,4 +23,4 @@ const MailSvg = () => (
   </svg>
 )
 
-export default MailSvg
+export default MailIcon
